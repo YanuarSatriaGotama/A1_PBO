@@ -1,16 +1,17 @@
-package POSTTETS1;
+package posttest2;
 
-import java.util.Scanner;
 import java.util.ArrayList;
-        
-public class Posttest1 {
+import java.util.Scanner;
+
+public class Posttest2 {
     static Scanner input_int = new Scanner(System.in);
     static Scanner input_str = new Scanner(System.in);
     static ArrayList Nama = new ArrayList<>();
     static ArrayList Nomer_telp = new ArrayList<>();
     static ArrayList Jenis_Foto = new ArrayList<>();
     static ArrayList Harga = new ArrayList<>();
-
+    
+    
     public static void main(String[] args) {
         menu();
     }
@@ -20,6 +21,7 @@ public class Posttest1 {
         System.out.println("\t [2] read pesanan   ");
         System.out.println("\t [3] update pesanan    ");
         System.out.println("\t [4] delete Pesanan   ");
+        System.out.println("\t [5] data class   ");
         System.out.println("\t [0] Keluar            ");
         System.out.println("\t---------------------------");
         System.out.print("\tPilih Menu = ");
@@ -44,6 +46,12 @@ public class Posttest1 {
         }
         else if(menu.equals("4")){
             delete_Pesanan();
+            System.out.println("Tekan Enter Untuk Kembali");
+            input_str.nextLine();
+            menu();
+        }
+        else if(menu.equals("5")){
+            data_class();
             System.out.println("Tekan Enter Untuk Kembali");
             input_str.nextLine();
             menu();
@@ -99,9 +107,8 @@ public class Posttest1 {
         }
     }
     static void update_Pesanan(){
-        System.out.println("<<============== Studio Foto ===========>>");
-        System.out.println("<<           Update Pesanan Anda       >>");
         read_Pesanan();
+        System.out.println("<<        Update Pesanan Anda       >>");
         System.out.println("    Pesanan yang ingin di updete    ");
         System.out.print("    -> ");
         int indx_update = input_int.nextInt();
@@ -139,5 +146,33 @@ public class Posttest1 {
         Nomer_telp.remove(indx_hapus-1);
         Jenis_Foto.remove(indx_hapus-1);
         Harga.remove(indx_hapus-1);
+    }
+    static void data_class(){
+        System.out.println("Postest 2");
+        
+        Studiofoto object = new Studiofoto("Fajri","Pra-Wedding",1234563894,"10R");
+        Studiofoto object2 = new Studiofoto("Bayu","Wedding",983472983,"12R");
+        
+        System.out.print("Nama          : ");
+        System.out.println(object.nama);
+        System.out.print("Jenis Foto    : ");
+        System.out.println(object.Jenis_foto);
+        System.out.print("Nomor Telepon : ");
+        System.out.println(object.no_telp);
+        System.out.print("Ukuran Foto   : ");
+        System.out.println(object.ukuran);
+        System.out.print("Note! ");
+        object.method1();
+        System.out.println("-------------------------------------------");
+        System.out.print("Nama          : ");
+        System.out.println(object2.nama);
+        System.out.print("Jenis Foto    : ");
+        System.out.println(object2.Jenis_foto);
+        System.out.print("Nomor Telepon : ");
+        System.out.println(object2.no_telp);
+        System.out.print("Ukuran Foto   : ");
+        System.out.println(object2.ukuran);
+        System.out.print("Note! ");
+        object2.method2();
     }
 }
