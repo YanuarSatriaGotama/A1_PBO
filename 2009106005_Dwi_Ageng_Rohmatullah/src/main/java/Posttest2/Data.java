@@ -61,9 +61,9 @@ public class Data {
     }
 
     public void InfojumharTunggal(){
-        System.out.println(" Informasi ");
+        System.out.println(" Informasi Penjualan jumlah ikan dan harga tunggal : ");
         System.out.println(" Jumlah : " + jumlah );
-        System.out.println(" harga : " + harga );
+        System.out.println(" harga : Rp " + harga );
     }
 
     public void IkanTerjual(){

@@ -27,10 +27,10 @@ public class Main {
         do {
             System.out.println(" ~~ Kios Ikan Hias Minaria ~~ ");
             System.out.println(">> Daftar Ikan hias yang tersedia :");
-            System.out.println("1. Ikan Guppy  Rp25000/ekor");
-            System.out.println("2. Ikan Cupang Rp75000/ekor");
-            System.out.println("3. Ikan Koi    Rp120000/ekor");
-            System.out.println("4. Ikan Mas    Rp37500/ekor");
+            System.out.println("1. Ikan Guppy.  Warna : Hitam, Biru, Neon.  Rp25000/ekor");
+            System.out.println("2. Ikan Cupang.  Warna : Merah, Biru, Ungu.  Rp75000/ekor");
+            System.out.println("3. Ikan Koi.  Warna : Putih, Hitam, Silver.  Rp120000/ekor");
+            System.out.println("4. Ikan Mas.  Warna : Hitam, Putih, Jingga.  Rp37500/ekor");
             System.out.println("===================================");
             System.out.println("===================================");
             System.out.println("=============  Menu  ==============");
@@ -38,6 +38,8 @@ public class Main {
             System.out.println("2> Menampilkan data pesanan");
             System.out.println("3> Hapus data pesanan");
             System.out.println("4> Ubah data pesanan");
+            System.out.println("5> Informasi penjualan jumlah ikan dan harga tunggal");
+            System.out.println("6> Informasi Jenis Ikan terjual");
             System.out.println("0> Keluar");
             System.out.println("Masukkan Pilihan Anda");
             menu = input.nextInt(); input.nextLine();
@@ -100,11 +102,11 @@ public class Main {
     
     private static void liat_data(){
         System.out.println("~~ Liat data penjualan ~~");
-        System.out.println("\nNo  Jenisikan\tJumlah  Harga");
+        System.out.println("\nNo   Jenisikan\tWarnaikan  Jumlah  Harga");
         
         for (Data ikanda : listData){
             System.out.println(
-                    ikanda.getId() + "  " + ikanda.getJenisikan() + "  " + ikanda.getWarnaikan() + "  " + ikanda.getJumlah() + " Rp " + ikanda.getHarga()
+                    ikanda.getId() + "    " + ikanda.getJenisikan() + "\t" + ikanda.getWarnaikan() + "\t   " + ikanda.getJumlah() + "\t   Rp " + ikanda.getHarga()
             );
         }
         System.out.println();
@@ -193,6 +195,7 @@ public class Main {
                 break;
             }
         }
+        input_lagi();
     }
 
     public static void infoikan(){
@@ -201,6 +204,7 @@ public class Main {
             ikanda.IkanTerjual();
         }
         System.out.println();
+        input_lagi();
     }
 }
 
