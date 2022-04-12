@@ -10,6 +10,7 @@ package posttest2;
  * @author USER
  */
 public class Penduduk {
+    //atribut
     long nik;
     String nama,tempat,tanggal,sex, agama, status, pekerjaan, alamat;
     
