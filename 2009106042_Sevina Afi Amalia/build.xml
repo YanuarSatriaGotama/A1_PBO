@@ -8,7 +8,7 @@
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
 <project name="2009106042_Sevina_Afi_Amalia" default="default" basedir=".">
-    <description>Builds, tests, and runs the project 2009106042_Sevina_Afi_Amalia.</description>
+    <description>Builds, tests, and runs the project 2009106042_Sevina Afi Amalia.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
