@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg2009106012_fathia_nuq_qamarina;
+package Posttest2;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
+
 /**
  *
  * @author LENOVO
  */
-public class Posttest_1 {
+public class Main {
 
     /**
      * @param args the command line arguments
@@ -44,22 +44,24 @@ public class Posttest_1 {
                     int id = input.nextInt();
                     System.out.print("Masukkan Nama Obat : ");
                     String Nama = input1.nextLine();
+                    System.out.print("Masukkan Jenis Obat : ");
+                    String Jenis = input1.nextLine();
                     System.out.print("Masukkan Stock Obat : ");
                     int Stock = input.nextInt();
                     
-                    Obt.add(new Obat(id,Nama,Stock));
+                    Obt.add(new Obat(id,Nama,Jenis,Stock));
                     System.out.println("Data Berhasil Disimpan..."); 
                     System.out.println(" ");
                 break;
                 case 2:
-                    System.out.println("=============================");
-                    System.out.println("ID     |Nama         |Stock");
+                    System.out.println("=============================================");
+                    System.out.println("ID     |Nama           |Jenis          |Stock");
                     Iterator<Obat> i = Obt.iterator();
                     while(i.hasNext()){
                         Obat o = i.next();
                         System.out.println(o);   
                     }
-                    System.out.println("=============================");
+                    System.out.println("=============================================");
                     System.out.println(" ");
                 break;
                 case 3:
@@ -95,9 +97,12 @@ public class Posttest_1 {
                             System.out.print("Masukkan Nama Obat Baru :");
                             Nama = input1.nextLine();
                             
+                            System.out.print("Masukkan Jenis Obat Baru :");
+                            Jenis = input1.nextLine();
+                            
                             System.out.print("Masukkan Stock Obat Baru :");
                             Stock = input.nextInt();
-                            li.set(new Obat (id, Nama, Stock));
+                            li.set(new Obat (id, Nama, Jenis, Stock));
                             found = true;
                         }
                     }
@@ -115,32 +120,7 @@ public class Posttest_1 {
                 break;
             }
         }while(ph!=0);
+        
     }
     
-}
-
-class Obat{
-
-    private int id;
-    private String Nama;
-    private int Stock;
-    
-    Obat(int id, String Nama, int Stock){
-        this.id = id;
-        this.Nama = Nama;
-        this.Stock = Stock;
-    }
-    
-    public int getid(){
-        return id;
-    }
-    public String getNama(){
-        return Nama;
-    }
-    public int getStock(){
-        return Stock;
-    }
-     public String toString(){
-        return id+"\t"+Nama+"\t"+Stock;
-    }
 }
