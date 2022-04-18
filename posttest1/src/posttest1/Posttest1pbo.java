@@ -2,8 +2,9 @@ package posttest1;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
+
 public class Posttest1pbo {
-    static ArrayList<String> bukunovel;
+    static ArrayList<String> novelbuku;
     static Scanner input2=new Scanner(System.in);
     static Scanner input3=new Scanner(System.in);
     static ArrayList listNovel0 = new ArrayList();
@@ -12,7 +13,7 @@ public class Posttest1pbo {
     static ArrayList listNovel2 = new ArrayList();
     static ArrayList listNovel3 = new ArrayList();
     
-    static void clearScreen(){
+    public static void clearScreen(){
         try {
         final String os = System.getProperty("os.name");
         if (os.contains("Windows")) {
@@ -22,7 +23,6 @@ public class Posttest1pbo {
                     .start()
                     .waitFor();
         } else {
-            // clear screen untuk Linux, Unix, Mac
             Runtime.getRuntime().exec("clear");
             System.out.print("\033[H\033[2J");
             System.out.flush();
@@ -104,7 +104,7 @@ public class Posttest1pbo {
         System.out.print("Masukkan jumlah buku: ");
         int indexNovel = input2.nextInt();
         for(int j = 0; j < indexNovel; j++){
-        System.out.print("Nomor Novel: ");
+        System.out.print("Nomor Novel : ");
         int nomorNovel = input2.nextInt();
         System.out.print("Nama Novel : ");
         String namaNovel = input3.nextLine();
@@ -134,8 +134,9 @@ public class Posttest1pbo {
         String penulisBaru = input3.nextLine();
         System.out.print("Nama Penerbit : ");
         String penerbitBaru = input3.nextLine();
+        int tahunBaru;
         System.out.print("Tahun Terbit: ");
-        String tahunBaru = input3.nextLine();
+        tahunBaru = input2.nextInt();
         
         listNovel.set((updateIndex-1), novelBaru);
         listNovel1.set((updateIndex-1), penulisBaru);
